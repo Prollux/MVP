@@ -7,8 +7,13 @@ class RecipeIngredients extends React.Component {
   }
   render() {
     const { ingredients } = this.props;
-    return ingredients.map(ingredient =>
+    let ingredientList = ingredients.map(ingredient =>
       <div className="ingredient" key={ingredient.id}>{ingredient.name}</div>
+      );
+      return (
+        <div className='ingredient-container'> other ingredients
+          {ingredientList}
+        </div>
       )
   }
 }

@@ -1974,7 +1974,388 @@ const data = [
   }
 ];
 
+const recipeData = {
+  "vegetarian": true,
+  "vegan": false,
+  "glutenFree": true,
+  "dairyFree": false,
+  "veryHealthy": false,
+  "cheap": false,
+  "veryPopular": false,
+  "sustainable": false,
+  "weightWatcherSmartPoints": 8,
+  "gaps": "no",
+  "lowFodmap": false,
+  "preparationMinutes": 15,
+  "cookingMinutes": 36,
+  "aggregateLikes": 29,
+  "spoonacularScore": 52.0,
+  "healthScore": 7.0,
+  "creditsText": "Kraft Recipes",
+  "sourceName": "Kraft Recipes",
+  "pricePerServing": 84.25,
+  "extendedIngredients": [
+      {
+          "id": 11353,
+          "aisle": "Produce",
+          "image": "russet-or-idaho-potatoes.png",
+          "consistency": "solid",
+          "name": "baking potatoes",
+          "nameClean": "starchy potato",
+          "original": "1 lb. baking potatoes (about 3), halved, thinly sliced",
+          "originalString": "1 lb. baking potatoes (about 3), halved, thinly sliced",
+          "originalName": "baking potatoes (about 3), halved, thinly sliced",
+          "amount": 1.0,
+          "unit": "lb",
+          "meta": [
+              "halved",
+              "thinly sliced",
+              "( 3)"
+          ],
+          "metaInformation": [
+              "halved",
+              "thinly sliced",
+              "( 3)"
+          ],
+          "measures": {
+              "us": {
+                  "amount": 1.0,
+                  "unitShort": "lb",
+                  "unitLong": "pound"
+              },
+              "metric": {
+                  "amount": 453.592,
+                  "unitShort": "g",
+                  "unitLong": "grams"
+              }
+          }
+      },
+      {
+          "id": 10011693,
+          "aisle": "Canned and Jarred",
+          "image": "tomatoes-canned.png",
+          "consistency": "solid",
+          "name": "canned tomatoes",
+          "nameClean": "canned tomatoes",
+          "original": "1 can (14.5 oz.) Italian-style diced tomatoes, undrained",
+          "originalString": "1 can (14.5 oz.) Italian-style diced tomatoes, undrained",
+          "originalName": "can Italian-style diced tomatoes, undrained",
+          "amount": 14.5,
+          "unit": "oz",
+          "meta": [
+              "diced",
+              "italian-style",
+              "undrained",
+              "canned"
+          ],
+          "metaInformation": [
+              "diced",
+              "italian-style",
+              "undrained",
+              "canned"
+          ],
+          "measures": {
+              "us": {
+                  "amount": 14.5,
+                  "unitShort": "oz",
+                  "unitLong": "ounces"
+              },
+              "metric": {
+                  "amount": 411.068,
+                  "unitShort": "g",
+                  "unitLong": "grams"
+              }
+          }
+      },
+      {
+          "id": 2003,
+          "aisle": "Spices and Seasonings",
+          "image": "basil.jpg",
+          "consistency": "solid",
+          "name": "dried basil leaves",
+          "nameClean": "dried basil",
+          "original": "1/2 tsp. dried basil leaves",
+          "originalString": "1/2 tsp. dried basil leaves",
+          "originalName": "dried basil leaves",
+          "amount": 0.5,
+          "unit": "tsp",
+          "meta": [
+              "dried"
+          ],
+          "metaInformation": [
+              "dried"
+          ],
+          "measures": {
+              "us": {
+                  "amount": 0.5,
+                  "unitShort": "tsps",
+                  "unitLong": "teaspoons"
+              },
+              "metric": {
+                  "amount": 0.5,
+                  "unitShort": "tsps",
+                  "unitLong": "teaspoons"
+              }
+          }
+      },
+      {
+          "id": 1123,
+          "aisle": "Milk, Eggs, Other Dairy",
+          "image": "egg.png",
+          "consistency": "solid",
+          "name": "eggs",
+          "nameClean": "egg",
+          "original": "8 eggs, beaten",
+          "originalString": "8 eggs, beaten",
+          "originalName": "eggs, beaten",
+          "amount": 8.0,
+          "unit": "",
+          "meta": [
+              "beaten"
+          ],
+          "metaInformation": [
+              "beaten"
+          ],
+          "measures": {
+              "us": {
+                  "amount": 8.0,
+                  "unitShort": "",
+                  "unitLong": ""
+              },
+              "metric": {
+                  "amount": 8.0,
+                  "unitShort": "",
+                  "unitLong": ""
+              }
+          }
+      },
+      {
+          "id": 4053,
+          "aisle": "Oil, Vinegar, Salad Dressing",
+          "image": "olive-oil.jpg",
+          "consistency": "liquid",
+          "name": "olive oil",
+          "nameClean": "olive oil",
+          "original": "1 Tbsp. olive oil",
+          "originalString": "1 Tbsp. olive oil",
+          "originalName": "olive oil",
+          "amount": 1.0,
+          "unit": "Tbsp",
+          "meta": [],
+          "metaInformation": [],
+          "measures": {
+              "us": {
+                  "amount": 1.0,
+                  "unitShort": "Tbsp",
+                  "unitLong": "Tbsp"
+              },
+              "metric": {
+                  "amount": 1.0,
+                  "unitShort": "Tbsp",
+                  "unitLong": "Tbsp"
+              }
+          }
+      },
+      {
+          "id": 11282,
+          "aisle": "Produce",
+          "image": "brown-onion.png",
+          "consistency": "solid",
+          "name": "onion",
+          "nameClean": "onion",
+          "original": "1 onion, coarsely chopped",
+          "originalString": "1 onion, coarsely chopped",
+          "originalName": "onion, coarsely chopped",
+          "amount": 1.0,
+          "unit": "",
+          "meta": [
+              "coarsely chopped"
+          ],
+          "metaInformation": [
+              "coarsely chopped"
+          ],
+          "measures": {
+              "us": {
+                  "amount": 1.0,
+                  "unitShort": "",
+                  "unitLong": ""
+              },
+              "metric": {
+                  "amount": 1.0,
+                  "unitShort": "",
+                  "unitLong": ""
+              }
+          }
+      },
+      {
+          "id": 1001009,
+          "aisle": "Cheese",
+          "image": "shredded-cheddar.jpg",
+          "consistency": "solid",
+          "name": "shredded cheddar cheese",
+          "nameClean": "shredded cheddar cheese",
+          "original": "1 cup KRAFT Shredded Cheddar Cheese",
+          "originalString": "1 cup KRAFT Shredded Cheddar Cheese",
+          "originalName": "KRAFT Shredded Cheddar Cheese",
+          "amount": 1.0,
+          "unit": "cup",
+          "meta": [
+              "shredded",
+              "kraft"
+          ],
+          "metaInformation": [
+              "shredded",
+              "kraft"
+          ],
+          "measures": {
+              "us": {
+                  "amount": 1.0,
+                  "unitShort": "cup",
+                  "unitLong": "cup"
+              },
+              "metric": {
+                  "amount": 236.588,
+                  "unitShort": "ml",
+                  "unitLong": "milliliters"
+              }
+          }
+      }
+  ],
+  "id": 278515,
+  "title": "Cheesy Potato & Egg Skillet",
+  "readyInMinutes": 51,
+  "servings": 6,
+  "sourceUrl": "http://www.kraftrecipes.com/recipes/cheesy-potato-egg-skillet-119005.aspx",
+  "image": "https://spoonacular.com/recipeImages/278515-556x370.jpg",
+  "imageType": "jpg",
+  "summary": "Cheesy Potato & Egg Skillet is a <b>gluten free and vegetarian</b> main course. This recipe serves 6. One portion of this dish contains roughly <b>15g of protein</b>, <b>14g of fat</b>, and a total of <b>270 calories</b>. For <b>84 cents per serving</b>, this recipe <b>covers 15%</b> of your daily requirements of vitamins and minerals. This recipe is liked by 29 foodies and cooks. If you have olive oil, canned tomatoes, basil leaves, and a few other ingredients on hand, you can make it. To use up the eggs you could follow this main course with the <a href=\"https://spoonacular.com/recipes/rose-levy-beranbaums-chocolate-tomato-cake-with-mystery-ganache-27408\">Rose Levy Beranbaum's Chocolate Tomato Cake with Mystery Ganache</a> as a dessert. All things considered, we decided this recipe <b>deserves a spoonacular score of 55%</b>. This score is solid. Similar recipes include <a href=\"https://spoonacular.com/recipes/cheesy-potato-and-bacon-skillet-619482\">Cheesy Potato and Bacon Skillet</a>, <a href=\"https://spoonacular.com/recipes/cheesy-steak-and-potato-skillet-181038\">Cheesy Steak and Potato Skillet</a>, and <a href=\"https://spoonacular.com/recipes/cheesy-fried-ham-+-potato-breakfast-skillet-678531\">Cheesy Fried Ham + Potato Breakfast Skillet</a>.",
+  "cuisines": [],
+  "dishTypes": [
+      "lunch",
+      "main course",
+      "main dish",
+      "dinner"
+  ],
+  "diets": [
+      "gluten free",
+      "lacto ovo vegetarian"
+  ],
+  "occasions": [],
+  "winePairing": {},
+  "instructions": "Heat oil in large nonstick skillet on medium heat.  Add potatoes and onions; cover.  Cook 16 to 18 min. or until vegetables are tender and golden brown, stirring occasionally.  Stir in tomatoes.                                             Pour eggs over vegetable mixture.  (Do not stir.)  Cover; cook 12 to 14 min. or until eggs are set.                                            Top with cheese and basil; cook, covered, 2 to 3 min. or until cheese is melted.",
+  "analyzedInstructions": [
+      {
+          "name": "",
+          "steps": [
+              {
+                  "number": 1,
+                  "step": "Heat oil in large nonstick skillet on medium heat.",
+                  "ingredients": [
+                      {
+                          "id": 4582,
+                          "name": "cooking oil",
+                          "localizedName": "cooking oil",
+                          "image": "vegetable-oil.jpg"
+                      }
+                  ],
+                  "equipment": [
+                      {
+                          "id": 404645,
+                          "name": "frying pan",
+                          "localizedName": "frying pan",
+                          "image": "pan.png"
+                      }
+                  ]
+              },
+              {
+                  "number": 2,
+                  "step": "Add potatoes and onions; cover.  Cook 16 to 18 min. or until vegetables are tender and golden brown, stirring occasionally.  Stir in tomatoes.",
+                  "ingredients": [
+                      {
+                          "id": 11583,
+                          "name": "vegetable",
+                          "localizedName": "vegetable",
+                          "image": "mixed-vegetables.png"
+                      },
+                      {
+                          "id": 11352,
+                          "name": "potato",
+                          "localizedName": "potato",
+                          "image": "potatoes-yukon-gold.png"
+                      },
+                      {
+                          "id": 11529,
+                          "name": "tomato",
+                          "localizedName": "tomato",
+                          "image": "tomato.png"
+                      },
+                      {
+                          "id": 11282,
+                          "name": "onion",
+                          "localizedName": "onion",
+                          "image": "brown-onion.png"
+                      }
+                  ],
+                  "equipment": [],
+                  "length": {
+                      "number": 16,
+                      "unit": "minutes"
+                  }
+              },
+              {
+                  "number": 3,
+                  "step": "Pour eggs over vegetable mixture.  (Do not stir.)  Cover; cook 12 to 14 min. or until eggs are set.",
+                  "ingredients": [
+                      {
+                          "id": 11583,
+                          "name": "vegetable",
+                          "localizedName": "vegetable",
+                          "image": "mixed-vegetables.png"
+                      },
+                      {
+                          "id": 1123,
+                          "name": "egg",
+                          "localizedName": "egg",
+                          "image": "egg.png"
+                      }
+                  ],
+                  "equipment": [],
+                  "length": {
+                      "number": 12,
+                      "unit": "minutes"
+                  }
+              },
+              {
+                  "number": 4,
+                  "step": "Top with cheese and basil; cook, covered, 2 to 3 min. or until cheese is melted.",
+                  "ingredients": [
+                      {
+                          "id": 1041009,
+                          "name": "cheese",
+                          "localizedName": "cheese",
+                          "image": "cheddar-cheese.png"
+                      },
+                      {
+                          "id": 2044,
+                          "name": "basil",
+                          "localizedName": "basil",
+                          "image": "basil.jpg"
+                      }
+                  ],
+                  "equipment": [],
+                  "length": {
+                      "number": 2,
+                      "unit": "minutes"
+                  }
+              }
+          ]
+      }
+  ],
+  "originalId": null
+};
+
 module.exports = {
   dummydata: data,
+  recipeData: recipeData,
 };
 

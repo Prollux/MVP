@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const getRecipes = (self, obj) => {
+export const getRecipes = (self, obj) => {
   axios.get('/recipes', {
     params: obj
   })
@@ -12,4 +12,13 @@ const getRecipes = (self, obj) => {
   });
 };
 
-export default getRecipes;
+export const getRecipeDetails = (self, id) => {
+  axios.get('/recipes/details', {
+    params: {
+      id: id
+    }
+  })
+  .then(data => {
+    self.setState({currentRecipe: data})
+  })
+}

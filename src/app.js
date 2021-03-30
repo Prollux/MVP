@@ -1,5 +1,5 @@
 import React from 'react';
-import getRecipes from './requests/requests.js';
+import { getRecipes, getRecipeDetails } from './requests/requests.js';
 import Recipes from './components/recipes/Recipes.js';
 class App extends React.Component {
   constructor() {
