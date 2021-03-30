@@ -3,7 +3,7 @@ import getRecipes from './requests/requests.js';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
+    this.state = { params: {}, recipes: []
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -12,12 +12,14 @@ class App extends React.Component {
     event.preventDefault();
     const id = event.target.id;
     const text = event.target.value;
-    this.setState({[id]: text});
+    let newParams = this.state.params;
+    newParams[id] = text;
+    this.setState({params: newParams});
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    getRecipes(this, this.state);
+    getRecipes(this, this.state.params);
   }
 
   render() {
