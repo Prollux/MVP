@@ -6,8 +6,10 @@ const functions = require('../functions/functions.js');
 const getRecipes = (req, res) => {
   console.log(req.query);
   //axios request to API
-  params = req.query;
+  let params = req.query;
   params.apiKey = apiKey;
+  params.ranking = 2;
+  debugger;
   //https://api.spoonacular.com/recipes/findByIngredients/?apiKey=${apiKey}&ingredients=
   let result = functions.refineRecipes(data.dummydata);
   res.status(201).send(result);
