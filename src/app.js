@@ -1,5 +1,6 @@
 import React from 'react';
 import getRecipes from './requests/requests.js';
+import Recipes from './components/recipes/Recipes.js';
 class App extends React.Component {
   constructor() {
     super();
@@ -24,6 +25,7 @@ class App extends React.Component {
 
   render() {
     return (
+      <>
       <div>
         <div>hungry.io</div>
         <label> what do you have on hand?
@@ -33,6 +35,10 @@ class App extends React.Component {
           </form>
         </label>
       </div>
+      <div className='recipes-container'>
+        <Recipes recipes={this.state.recipes} />
+      </div>
+      </>
     )
   }
 }
