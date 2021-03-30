@@ -38,7 +38,7 @@ class App extends React.Component {
         </label>
       </div>
       <div className='recipes-container'>
-        {this.state.currentRecipe ? <Instructions recipe={this.state.currentRecipe} /> : <Recipes recipes={this.state.recipes} self={this} />}
+        {this.state.currentRecipe ? <Instructions recipe={this.state.currentRecipe} self={this} /> : <Recipes recipes={this.state.recipes} self={this} />}
       </div>
       </>
     )

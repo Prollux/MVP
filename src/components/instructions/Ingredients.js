@@ -7,10 +7,16 @@ class Ingredients extends React.Component {
   }
   render() {
     const { ingredients } = this.props;
+    const ingredientList = ingredients.map(ingredient =>
+      <div key={ingredient.id} className='ingredient'>{ingredient.original}</div>
+      )
     return (
-      <div key={recipeStep.id}>
-        {recipeStep.original}
+      <div className='ingredient-container'>
+        <div className='ingredient-header'>Ingredients</div>
+        {ingredientList}
       </div>
     )
   }
 }
+
+export default Ingredients;
