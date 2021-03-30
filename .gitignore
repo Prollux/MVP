@@ -1,6 +1,5 @@
 ### node etc ###
-public/index.bundle.js
-index.bundle.js.LICENSE.txt
+/public/bundle.js
 
 # Logs
 logs
