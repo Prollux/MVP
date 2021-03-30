@@ -13,7 +13,12 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack --mode production"
+    "start": "nodemon server/server.js",
+    "build": "webpack --mode production",
+    "placeholder": "webpack-dev-server --open"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
   }
 }
