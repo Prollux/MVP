@@ -1,6 +1,8 @@
 import React from 'react';
-import { getRecipes, getRecipeDetails } from './requests/requests.js';
+import { getRecipes } from './requests/requests.js';
 import Recipes from './components/recipes/Recipes.js';
+import Instructions from './components/instructions/Instructions.js';
+
 class App extends React.Component {
   constructor() {
     super();
@@ -36,7 +38,7 @@ class App extends React.Component {
         </label>
       </div>
       <div className='recipes-container'>
-        <Recipes recipes={this.state.recipes} />
+        {this.state.currentRecipe ? <Instructions recipe={this.state.currentRecipe} /> : <Recipes recipes={this.state.recipes} self={this} />}
       </div>
       </>
     )

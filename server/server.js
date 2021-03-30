@@ -13,6 +13,8 @@ server.listen(port, () => {
 
 server.get('/recipes', requests.getRecipes);
 
+server.get('/recipes/details', requests.getRecipeInfo);
+
 
 
 

@@ -19,6 +19,9 @@ export const getRecipeDetails = (self, id) => {
     }
   })
   .then(data => {
-    self.setState({currentRecipe: data})
+    self.setState({currentRecipe: data.data}, () => {console.log(self.state)})
+  })
+  .catch(err => {
+    console.log(err);
   })
 }
