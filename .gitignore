@@ -1,5 +1,6 @@
 ### node etc ###
 /public/bundle.js
+apiKey.js
 
 # Logs
 logs
