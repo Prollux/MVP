@@ -4,7 +4,7 @@ const refineRecipes = (arr) => {
       id: recipe.id,
       title: recipe.title,
       image: recipe.image,
-      otherIngredients: (recipe.missedIngredients ? recipe.missedIngredients.map(obj => obj.name) : [])
+      otherIngredients: (recipe.missedIngredients ? recipe.missedIngredients.map(obj => {return {name: obj.name, id: obj.id} }) : [])
     }
   });
   return results;

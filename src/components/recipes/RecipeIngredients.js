@@ -6,7 +6,10 @@ class RecipeIngredients extends React.Component {
     this.state = {};
   }
   render() {
-    return null;
+    const { ingredients } = this.props;
+    return ingredients.map(ingredient =>
+      <div className="ingredient" key={ingredient.id}>{ingredient.name}</div>
+      )
   }
 }
 
