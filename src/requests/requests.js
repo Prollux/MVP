@@ -1,11 +1,12 @@
 const axios = require('axios');
 
 const getRecipes = (obj) => {
-  debugger;
   axios.get('/recipes', {
     params: obj
   })
-  .then(console.log('tada! it works'))
+  .then(data => {
+    console.log(data.data);
+  })
   .catch(err => {
     console.log(err);
   });

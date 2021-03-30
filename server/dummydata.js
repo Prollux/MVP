@@ -1973,3 +1973,8 @@ const data = [
       "likes": 14
   }
 ];
+
+module.exports = {
+  dummydata: data,
+};
+

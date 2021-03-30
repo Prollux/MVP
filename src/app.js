@@ -4,7 +4,6 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      ingredients: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,9 +17,7 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const key = event.target.id;
-    debugger;
-    getRecipes(this.state);
+    getRecipes(this.state)
   }
 
   render() {
