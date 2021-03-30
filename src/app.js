@@ -10,6 +10,7 @@ class App extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.backToList = this.backToList.bind(this);
   }
   handleChange(event) {
     event.preventDefault();
@@ -25,17 +26,26 @@ class App extends React.Component {
     getRecipes(this, this.state.params);
   }
 
+  backToList(event) {
+    event.preventDefault();
+    this.setState({currentRecipe: null});
+  }
+
   render() {
     return (
       <>
       <div>
         <div>hungry.io</div>
-        <label> what do you have on hand?
-          <form onSubmit={this.handleSubmit}>
-          <input id='ingredients'type='text' placeholder='list ingredients here' onChange={this.handleChange} />
-          <button type="submit">submit</button>
-          </form>
-        </label>
+        {this.state.currentRecipe ?
+          <button type="submit" onClick={this.backToList}>Back to List</button>
+        :
+          <label> what do you have on hand?
+            <form onSubmit={this.handleSubmit}>
+            <input id='ingredients'type='text' placeholder='list ingredients here' onChange={this.handleChange} />
+            <button type="submit">submit</button>
+            </form>
+          </label>
+        }
       </div>
       <div className='recipes-container'>
         {this.state.currentRecipe ? <Instructions recipe={this.state.currentRecipe} self={this} /> : <Recipes recipes={this.state.recipes} self={this} />}
