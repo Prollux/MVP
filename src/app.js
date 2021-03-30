@@ -17,7 +17,7 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    getRecipes(this.state)
+    getRecipes(this, this.state);
   }
 
   render() {
