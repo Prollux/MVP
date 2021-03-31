@@ -64,11 +64,11 @@ class App extends React.Component {
           </label>
         }
         <div className='favorites'>
-          <Favorites favorites={favorites} />
+          {currentRecipe ? null : <Favorites favorites={favorites} />}
         </div>
       </div>
       <div className='recipes-container'>
-        {currentRecipe ? <Instructions recipe={currentRecipe} self={this} /> : <Recipes recipes={recipes} self={this} />}
+        {currentRecipe ? <Instructions recipe={currentRecipe} self={this} favorites={favorites} /> : <Recipes recipes={recipes} self={this} />}
       </div>
       </>
     )
