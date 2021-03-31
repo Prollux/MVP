@@ -4,11 +4,11 @@ import Ingredients from './Ingredients.js';
 class Instructions extends React.Component {
   constructor() {
     super();
-    this.state = {};
-    this.handleSubmit=this.handleSubmit.bind(this);
+    this.state = {isFavorite: Boolean(localStorage.getItem(this.props.recipe.id))};
+    this.addFavorite=this.addFavorite.bind(this);
   }
 
-  handleSubmit(event) {
+  addFavorite(event) {
     event.preventDefault()
     const { id, title } = this.props.recipe;
     const { self } = this.props;
@@ -28,6 +28,10 @@ class Instructions extends React.Component {
     }
   }
 
+  removeFavorite(event) {
+    event.preventDefault
+  }
+
   render() {
     const { instructions, title, image, ingredients } = this.props.recipe;
     return (
@@ -40,7 +44,7 @@ class Instructions extends React.Component {
         <div className='instructions-txt'>
           {instructions}
         </div>
-        <button id='btn-favorite' type='submit' onClick={this.handleSubmit}>Add to Favorites</button>
+        <button id='btn-favorite' type='submit' onClick={this.addFavorite}>Add to Favorites</button>
       </div>
     )
   }

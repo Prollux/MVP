@@ -20,9 +20,8 @@ class App extends React.Component {
   componentDidMount() {
     const self = this;
     if (localStorage.getItem('favorites')) {
-      localStorage.getItem('favorites', results => {
-        self.setState({favorites: JSON.parse(results)}, () => {console.log(self.state)})
-      })
+      let results = localStorage.getItem('favorites');
+        self.setState({favorites: JSON.parse(results)})
     }
   }
 
@@ -64,12 +63,12 @@ class App extends React.Component {
             </form>
           </label>
         }
+        <div className='favorites'>
+          <Favorites favorites={favorites} />
+        </div>
       </div>
       <div className='recipes-container'>
         {currentRecipe ? <Instructions recipe={currentRecipe} self={this} /> : <Recipes recipes={recipes} self={this} />}
-      </div>
-      <div className='favorites'>
-        <Favorites favorites={favorites} />
       </div>
       </>
     )
