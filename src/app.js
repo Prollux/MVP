@@ -64,7 +64,7 @@ class App extends React.Component {
           </label>
         }
         <div className='favorites'>
-          {currentRecipe ? null : <Favorites favorites={favorites} />}
+          {currentRecipe ? null : <Favorites favorites={favorites} self={this} />}
         </div>
       </div>
       <div className='recipes-container'>
