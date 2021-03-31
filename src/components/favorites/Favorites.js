@@ -8,7 +8,7 @@ class Favorites extends React.Component {
   render() {
     const { favorites } = this.props;
     let favoritesList = favorites.map(favorite =>
-      <div key ={favorite.id} id={favorite.id} className='favorites-title' onClick={this.handleClick}>{favorite.title}</div>
+      <div key ={`${favorite.id}-fav`} id={`${favorite.id}-fav`} className='favorites-title' onClick={this.handleClick}>{favorite.title}</div>
     );
     return (
       favorites.length ?

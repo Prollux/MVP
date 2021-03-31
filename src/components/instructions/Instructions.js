@@ -6,7 +6,6 @@ class Instructions extends React.Component {
     super();
     this.props = props;
     this.state = {isFavorite: Boolean(localStorage.getItem(props.recipe.id))};
-    debugger;
     this.addFavorite=this.addFavorite.bind(this);
     this.removeFavorite = this.removeFavorite.bind(this);
   }
@@ -44,6 +43,7 @@ class Instructions extends React.Component {
     });
     localStorage.setItem('favorites', newFavs);
     localStorage.removeItem(`${id}`);
+    debugger;
     this.setState({isFavorite: false });
     self.setState({favorites: newFavs});
   }
