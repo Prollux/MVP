@@ -16,7 +16,6 @@ class Instructions extends React.Component {
       id: id,
       title: title,
     }
-    debugger;
     if (localStorage.getItem('favorites')) {
       let currentFavorites = JSON.parse(localStorage.getItem('favorites'))
       currentFavorites.push(insert);

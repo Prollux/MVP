@@ -16,15 +16,20 @@ const getRecipes = (req, res) => {;
 const getRecipeInfo = (req, res) => {
   //axios request to API
   //https://api.spoonacular.com/recipes/${req.query.id}/information?apiKey=${apiKey}
-  const { extendedIngredients, title, image, instructions, summary, id } = data.recipeData;
-  const recipeInfo = {
-    id: id,
-    ingredients: extendedIngredients,
-    title: title,
-    image: image,
-    instructions: instructions,
-  };
-  res.send(recipeInfo);
+  axios.get(`https://api.spoonacular.com/recipes/${req.query.id}/information?apiKey=${apiKey}`)
+  .then(data => {
+    debugger;
+    const { extendedIngredients, title, image, instructions, summary, id } = data.data;
+    const recipeInfo = {
+      id: id,
+      ingredients: extendedIngredients,
+      title: title,
+      image: image,
+      instructions: instructions,
+    };
+    debugger;
+    res.send(recipeInfo);
+  });
 }
 
 module.exports = {

@@ -2,6 +2,7 @@ import React from 'react';
 import { getRecipes } from './requests/requests.js';
 import Recipes from './components/recipes/Recipes.js';
 import Instructions from './components/instructions/Instructions.js';
+import Favorites from './components/favorites/Favorites.js';
 
 class App extends React.Component {
   constructor() {
@@ -20,7 +21,7 @@ class App extends React.Component {
     const self = this;
     if (localStorage.getItem('favorites')) {
       localStorage.getItem('favorites', results => {
-        self.setState({favorites: JSON.parse(results)})
+        self.setState({favorites: JSON.parse(results)}, () => {console.log(self.state)})
       })
     }
   }
@@ -62,6 +63,9 @@ class App extends React.Component {
       </div>
       <div className='recipes-container'>
         {this.state.currentRecipe ? <Instructions recipe={this.state.currentRecipe} self={this} /> : <Recipes recipes={this.state.recipes} self={this} />}
+      </div>
+      <div className='favorites'>
+
       </div>
       </>
     )
