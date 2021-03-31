@@ -37,7 +37,10 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    getRecipes(this, this.state.params);
+    const { params } = this.state;
+    if (params.ingredients) {
+      getRecipes(this, params);
+    }
   }
 
   backToList(event) {
@@ -46,6 +49,7 @@ class App extends React.Component {
   }
 
   render() {
+    const { recipes, currentRecipe, favorites } = this.state;
     return (
       <>
       <div>
@@ -62,10 +66,10 @@ class App extends React.Component {
         }
       </div>
       <div className='recipes-container'>
-        {this.state.currentRecipe ? <Instructions recipe={this.state.currentRecipe} self={this} /> : <Recipes recipes={this.state.recipes} self={this} />}
+        {currentRecipe ? <Instructions recipe={currentRecipe} self={this} /> : <Recipes recipes={recipes} self={this} />}
       </div>
       <div className='favorites'>
-
+        <Favorites favorites={favorites} />
       </div>
       </>
     )
