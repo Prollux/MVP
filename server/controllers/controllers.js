@@ -5,12 +5,20 @@ const functions = require('../functions/functions.js');
 
 const getRecipes = (req, res) => {;
   //axios request to API
-  let params = req.query;
-  params.apiKey = apiKey;
-  params.ranking = 2;
-  //https://api.spoonacular.com/recipes/findByIngredients/?apiKey=${apiKey}&ingredients=
-  let result = functions.refineRecipes(data.dummydata);
-  res.status(201).send(result);
+  let paramsObj = req.query;
+  paramsObj.apiKey = apiKey;
+  paramsObj.ranking = 2;
+  //https://api.spoonacular.com/recipes/findByIngredients/
+  axios.get(`https://api.spoonacular.com/recipes/findByIngredients/`,{
+    params: paramsObj
+  })
+  .then(data => {
+    let result = functions.refineRecipes(data.data);
+    res.status(201).send(result);
+  })
+  .catch(err => {
+    res.status(501).end()
+  });
 }
 
 const getRecipeInfo = (req, res) => {
