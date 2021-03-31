@@ -6,12 +6,25 @@ import Instructions from './components/instructions/Instructions.js';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { params: {}, recipes: []
+    this.state = {
+      params: {},
+      recipes: [],
+      favorites: [],
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.backToList = this.backToList.bind(this);
   }
+
+  componentDidMount() {
+    const self = this;
+    if (localStorage.getItem('favorites')) {
+      localStorage.getItem('favorites', results => {
+        self.setState({favorites: JSON.parse(results)})
+      })
+    }
+  }
+
   handleChange(event) {
     event.preventDefault();
     const id = event.target.id;

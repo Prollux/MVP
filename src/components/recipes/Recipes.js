@@ -12,7 +12,6 @@ class Recipes extends React.Component {
   handleClick(event) {
     const { self } = this.props;
     const id = event.target.id;
-    debugger;
     getRecipeDetails(self, id);
   }
 
