@@ -51,25 +51,21 @@ class App extends React.Component {
     const { recipes, currentRecipe, favorites } = this.state;
     return (
       <>
-      <div>
-        <div>hungry.io</div>
-        {this.state.currentRecipe ?
-          <button type="submit" onClick={this.backToList}>Back to List</button>
-        :
-          <label> what do you have on hand?
-            <form onSubmit={this.handleSubmit}>
-            <input id='ingredients'type='text' placeholder='list ingredients here' onChange={this.handleChange} />
-            <button type="submit">submit</button>
-            </form>
-          </label>
-        }
-        <div className='favorites'>
-          {currentRecipe ? null : <Favorites favorites={favorites} self={this} />}
-        </div>
-      </div>
-      <div className='recipes-container'>
-        {currentRecipe ? <Instructions recipe={currentRecipe} self={this} favorites={favorites} /> : <Recipes recipes={recipes} self={this} />}
-      </div>
+        <div className='title'>hungry.io</div>
+          {this.state.currentRecipe ?
+            <button type='submit' onClick={this.backToList}>Back to List</button>
+          :
+            <div className='search-container'>
+              <label> what do you have on hand?
+                <form onSubmit={this.handleSubmit}>
+                <input id='ingredients'type='text' placeholder='list ingredients here' onChange={this.handleChange} />
+                <button type="submit">submit</button>
+                </form>
+              </label>
+            </div>
+          }
+            {currentRecipe ? null : <Favorites favorites={favorites} self={this} />}
+          {currentRecipe ? <Instructions recipe={currentRecipe} self={this} favorites={favorites} /> : <div className='recipes-container'> <Recipes recipes={recipes} self={this} /> </div>}
       </>
     )
   }

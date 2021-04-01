@@ -12,7 +12,7 @@ class Favorites extends React.Component {
     event.preventDefault();
     const id = event.target.id;
     const { self } = this.props;
-    debugger;
+    debugger;7
     getRecipeDetails(self, id);
   }
 

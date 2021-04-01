@@ -1,0 +1,44 @@
+.title {
+	display: flex;
+	justify-content: center;
+	font-size: x-large;
+}
+
+.search-container {
+	display: flex;
+	justify-content: center;
+}
+
+.favorites-container {
+	margin-left: 45%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-weight: bold;
+}
+
+.favorites-title {
+	cursor: pointer;
+	width: fit-content;
+	transition: 0.2s;
+}
+
+.favorites-list {
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+.favorites-title:hover {
+	color: lightskyblue;
+}
+
+.recipes-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.recipe-container {
+	margin: 20px;
+	float: center;
+}
